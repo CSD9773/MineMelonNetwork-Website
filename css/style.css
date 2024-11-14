@@ -183,7 +183,7 @@ p, .copyright {
     align-items: center;
     align-content: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .5) url('https://cdn.discordapp.com/attachments/1230116591342194700/1306248776138096650/2024-11-13_20.25.02.png?ex=6735fa79&is=6734a8f9&hm=c829305cccce4b4cd98569a31d98ae322510c546df1ca9ca4e8e6f18fb2c4d29&');
+    background: rgba(0, 0, 0, .5);
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-position: center;
