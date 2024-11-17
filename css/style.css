@@ -1,0 +1,537 @@
+/* ─────────────────── Variables ─────────────────── */
+:root {
+    --nice-padding: 6rem;
+    --roundness: 0.75rem;
+    --accent1: #02db02;
+    --accent2: #05b305;
+    --accent2_transp: #05b30555;
+    --background1: #212529;
+    --background2: #16191b;
+    color-scheme: dark;
+}
+
+/* ─────────────────── Global Styles ─────────────────── */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--background1);
+    color: white;
+    margin: 0px;
+}
+
+span {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s;
+}
+
+strong {
+    font-weight: 700;
+}
+
+p, .copyright {
+    color: #ffffff99;
+}
+
+.copyright_div {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    width: auto;
+    background-color: #000;
+}
+
+/* ─────────────────── Headers ─────────────────── */
+.banner {
+    display: flex;
+    position: fixed;
+    background-color: #ff000099;
+    width: 100%;
+    height: 3rem;
+    z-index: 10;
+    font-size: 2rem;
+    font-weight: 600;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    align-content: center;
+    padding-top: .4rem;
+}
+
+.headline {
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ─────────────────── Navigation Bars ─────────────────── */
+.desktop_bar {
+    position: fixed;
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    background-color: #00000022;
+    backdrop-filter: blur(15px);
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.desktop_bar_logo_img {
+    width: 3rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.desktop_bar_link {
+    font-size: 1.2rem;
+    padding: .8rem;
+    text-align: center;
+}
+
+.desktop_bar_link:hover {
+    color: var(--accent1);
+}
+
+.desktop_bar_link2_div {
+    font-size: 1.2rem;
+    padding: .8rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    font-weight: 700;
+    border: solid 1px var(--accent1);
+    border-radius: var(--roundness);
+    text-align: center;
+}
+
+.desktop_bar_link2_div:hover {
+    border: solid 1px var(--accent2);
+    background-color: var(--accent2);
+    transform: scale(1.05);
+}
+
+.mobile_bar {
+    display: none;
+    overflow: hidden;
+    background-color: #00000033;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    flex-direction: row;
+    min-height: 53px;
+}
+
+.mobile_bar_logo_img {
+    position: absolute;
+    display: block;
+    height: 42px;
+    padding-left: .5rem;
+    top: 0;
+    left: 0;
+    padding-top: 3.5px;
+}
+
+.mobile_bar #mobile_bar_links {
+    display: none;
+    margin-top: 53px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #00000011;
+}
+
+.mobile_bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.mobile_bar .icon {
+    background-color: #00000044;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+}
+
+/* ─────────────────── Main ─────────────────── */
+.mainflex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main {
+    padding-top: calc(var(--nice-padding) + 2rem);
+    width: 1920px;
+    height: 800px;
+    display: flex;
+    width: 100%;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_logo_a {
+    margin-bottom: var(--nice-padding);
+    cursor: default;
+}
+
+.main_logo {
+    display: block;
+    align-self: center;
+    margin-left:auto;
+    margin-right: auto;
+    transition: all .5s;
+    max-width: 40rem;
+}
+
+.main_logo:hover {
+    transform: scale(1.05);
+}
+
+.main_description {
+	display: block;
+    text-align: center;
+    font-size:3rem;
+    margin-bottom: var(--nice-padding);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.main_actcent {
+    font-weight: 800;
+    color: var(--accent1);
+}
+
+.main_copy_ip {
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: var(--accent2_transp);
+    border: 0px;
+    border-radius: var(--roundness);
+    color: white;
+    transition: all .5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.main_copy_ip:hover {
+    background-color: var(--accent2);
+    transform: scale(1.05);
+}
+
+.main_popup {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    text-align: center;
+    background-color: rgba(0, 175, 0, 0.1);
+    border: solid rgba(0, 175, 0, 1) 1px;
+    color: #fff;
+    border-radius: var(--roundness);
+    z-index: 9999;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: -10.5rem;
+}
+
+/* ─────────────────── Discord ─────────────────── */
+.discord {
+    min-height: 12rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discord_logo {
+    width: 100%;
+    max-width: 256px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    object-fit: contain;
+    border-radius: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.discord_div {
+    padding: 5rem;
+    margin: 6rem;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background2);
+    border-radius: var(--roundness);
+    max-width: 48rem;
+}
+
+.discord_description_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.discord_description_title {
+    margin: 1.5rem;
+    text-align: center;
+    font-size:2rem;
+    font-weight: 700;
+
+}
+
+.discord_description {
+    margin-left:2.5rem;
+    margin-right:2rem;
+    font-size:1.3rem;
+	text-align: center;
+}
+
+.discord_button_a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border: solid var(--accent1) 1px;
+    border-radius: var(--roundness);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    transition: all .5s;
+}
+
+.discord_button_a:hover{
+    border: solid 1px var(--accent2);
+    background-color: var(--accent2);
+    transform: scale(1.05)
+}
+
+.discord_button {
+    padding:.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* ─────────────────── Manager List ─────────────────── */
+.manager {
+    background-color: var(--background2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.manager_row_1, .manager_row_2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.manager_card {
+    width: 230px;
+    height: 280px;
+    border-radius: 2em;
+    padding: 10px;
+    background-color: #191919;
+    box-shadow: 5px 5px 30px rgb(4, 4, 4), -5px -5px 30px rgb(57, 57, 57);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.manager_avatar {
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.manager_name {
+    color: white;
+    font-family: 'Lucida Sans', sans-serif;
+    padding: 15px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.manager_role_owner {
+    background-color: #191919;
+    border-radius: 3em;
+    width: 90%;
+    padding: 14px;
+    margin-top: 15px;
+    color: #ff6600;
+    box-shadow: 3px 3px 15px rgb(0, 0, 0), -3px -3px 15px rgb(58, 58, 58);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.manager_role_admin {
+    background-color: #191919;
+    border-radius: 3em;
+    width: 90%;
+    padding: 14px;
+    margin-top: 15px;
+    color: #e21717;
+    box-shadow: 3px 3px 15px rgb(0, 0, 0), -3px -3px 15px rgb(58, 58, 58);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.manager_role_mod {
+    background-color: #191919;
+    border-radius: 3em;
+    width: 90%;
+    padding: 14px;
+    margin-top: 15px;
+    color: #e21717;
+    box-shadow: 3px 3px 15px rgb(0, 0, 0), -3px -3px 15px rgb(58, 58, 58);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.manager p {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.manager_role_owner p {
+    color: #f82c2c;
+}
+
+.manager_role_admin p {
+    color: #e9864f;
+}
+
+.manager_role_mod p {
+    color: #f3279e;
+}
+
+/* ─────────────────── IP Server ─────────────────── */
+.ipserver {
+    background-color: var(--background1);
+    min-height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ipserver_div_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    margin: 1rem;
+}
+
+.ipserver_div {
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    height: 8rem;
+    background-color: var(--background2);
+    border-radius: var(--roundness);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.ipserver_title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.ipserver_content_div {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background1);
+    height: 100%;
+    border-radius: var(--roundness);
+    align-items: center;
+    justify-content: center;
+}
+
+.ipserver_categories {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    border-right: 3px solid var(--background2);
+    padding-right: .75rem;
+}
+
+.ipserver_values {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    border-left: 3px solid var(--background2);
+    padding-left: .75rem;
+}
+
+/* ─────────────────── Anchor ─────────────────── */
+#more, #discord, #about, #join {
+    padding-top: 5rem;
+    margin-top: -5rem;
+}
+
+/* ─────────────────── Media ─────────────────── */
+@media (max-width: 768px) {
+    .discord {
+        padding: 1rem;
+    }
+
+    .discord_div {
+        padding: 2rem;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background2);
+        border-radius: var(--roundness);
+        max-width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .discord_logo {
+        margin-bottom: 1rem;
+    }
+
+    .discord_description {
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .discord_button {
+        padding: 1rem;
+    }
+}
